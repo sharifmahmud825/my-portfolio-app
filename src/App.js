@@ -2,13 +2,20 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Component/Home/Home';
+import MyProjects from './Component/MyProjects/MyProjects';
+import Contact from './Component/Contact/Contact';
+import Header from './Component/Shared/Header/Header';
 
 function App() {
   return (
-    <div className='App'>
+    <div>
       <BrowserRouter>
+        <Header></Header>
         <Routes>
-          <Route path='/' element={<Home></Home>} />
+          <Route exact path='/' element={<Home></Home>} />
+          <Route path='/home' element={<Home></Home>} />
+          <Route path='/myProjects' element={<MyProjects></MyProjects>} />
+          <Route path='/contact' element={<Contact></Contact>} />
         </Routes>
       </BrowserRouter>
     </div>
