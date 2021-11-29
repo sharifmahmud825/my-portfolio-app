@@ -11,8 +11,11 @@ const Banner = () => {
               <h1 className='mb-3'>Myself</h1>
               <h1 className='name'>Sharif Mahmud</h1>
               <p>I am an enthusiast learner and a Junior Front-end developer</p>
-              <button className='btn btn-warning'>Download CV</button>
-
+              <button className='btn btn-warning'>
+                <a href='sharif-mahmud.pdf' download='sharif-mahmud.pdf'>
+                  Download CV
+                </a>
+              </button>
               <p className='mt-4'>
                 <span>
                   <a href='https://github.com/sharifmahmud825'>

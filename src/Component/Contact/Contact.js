@@ -9,19 +9,34 @@ const Contact = () => {
         <div className='row'>
           <div className='col-md-3'></div>
           <div className='col-md-6'>
-            <input
-              type='email'
-              name=''
-              id=''
-              placeholder='Email'
-              className='form-control bg-dark text-white'
-            />
-            <br />
-            <textarea
-              className='form-control bg-dark text-white'
-              rows='3'
-              placeholder='Comments'
-            ></textarea>
+            <form
+              action='malito:sharifmahmud825@gmail.com'
+              method='post'
+              enctype='text/plain'
+            >
+              <input
+                type='text'
+                name='name'
+                id=''
+                placeholder='Name '
+                className='form-control bg-dark text-white my-3'
+              />
+              <input
+                type='email'
+                name='email'
+                id=''
+                placeholder='Email'
+                className='form-control bg-dark text-white'
+              />
+              <br />
+              <textarea
+                className='form-control bg-dark text-white'
+                rows='3'
+                placeholder='Comments'
+              ></textarea>
+
+              <input type='submit' name='' id='' className='btn btn-warning' />
+            </form>
             <p className='text-center'>
               <span>
                 <a href='https://web.whatsapp.com/'>
@@ -34,7 +49,6 @@ const Contact = () => {
                 </a>
               </span>
             </p>
-            <button className='btn btn-warning w-100'>Say Hello!</button>
           </div>
           <div className='col-md-3'></div>
         </div>
