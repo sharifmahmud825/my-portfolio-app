@@ -1,0 +1,10 @@
+.background {
+  background-color: rgb(83, 83, 83);
+}
+.background a {
+  text-decoration: none;
+  color: white;
+}
+.card-image {
+  max-width: fit-content;
+}
