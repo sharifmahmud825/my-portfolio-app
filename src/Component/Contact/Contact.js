@@ -35,7 +35,12 @@ const Contact = () => {
                 placeholder='Comments'
               ></textarea>
 
-              <input type='submit' name='' id='' className='btn btn-warning' />
+              <input
+                type='submit'
+                name=''
+                id=''
+                className='btn btn-warning w-100 my-2'
+              />
             </form>
             <p className='text-center'>
               <span>
