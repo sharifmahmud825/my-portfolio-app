@@ -10,9 +10,9 @@ const AboutMe = () => {
         <div className='row'>
           <div className='col-md-4 border-end-3 border-warning'>
             <img
-              src='https://i.ibb.co/bsbL9ZR/profile.png'
+              src='https://i.ibb.co/Q8Q8Pws/profile3-2.png'
               alt=''
-              className='img-fluid w-75'
+              className='img-fluid w-75  rounded-circle'
             />
             <div className='my-4'>
               <h3 className='text-warning'>Skill</h3>
