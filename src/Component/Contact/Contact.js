@@ -1,6 +1,29 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_wbm5ssg',
+        'template_4zjpyn3',
+        e.target,
+        'user_sRHGAv3B9nNDzBqdMy9tT'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
   return (
     <div>
       <div className='container'>
@@ -9,40 +32,31 @@ const Contact = () => {
         <div className='row'>
           <div className='col-md-3'></div>
           <div className='col-md-6'>
-            <form
-              action='malito:sharifmahmud825@gmail.com'
-              method='post'
-              enctype='text/plain'
-            >
+            <form ref={form} onSubmit={sendEmail}>
+              <label>Name</label>
               <input
                 type='text'
                 name='name'
-                id=''
-                placeholder='Name '
-                className='form-control bg-dark text-white my-3'
+                className='form-control bg-dark text-white my-2 '
               />
+              <label>Email</label>
               <input
                 type='email'
                 name='email'
-                id=''
-                placeholder='Email'
-                className='form-control bg-dark text-white'
+                className='form-control bg-dark text-white my-2 '
               />
-              <br />
+              <label>Message</label>
               <textarea
-                className='form-control bg-dark text-white'
-                rows='3'
-                placeholder='Comments'
-              ></textarea>
-
+                name='message'
+                className='form-control bg-dark text-white my-2 '
+              />
               <input
                 type='submit'
-                name=''
-                id=''
-                className='btn btn-warning w-100 my-2'
+                value='Send'
+                className='btn btn-warning my-2 w-100'
               />
             </form>
-            <p className='text-center'>
+            {/* <p className='text-center'>
               <span>
                 <a href='https://web.whatsapp.com/'>
                   <i className='mt-5 me-4 fs-3 text-white fab fa-whatsapp'></i>
@@ -53,7 +67,7 @@ const Contact = () => {
                   <i className='mt-5 fs-3 text-white fab fa-facebook'></i>
                 </a>
               </span>
-            </p>
+            </p> */}
           </div>
           <div className='col-md-3'></div>
         </div>
